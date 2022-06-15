@@ -29,7 +29,7 @@ body {
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-rows:auto 1fr 1fr auto ;
+  grid-template-rows:auto  1fr auto ;
 }
 
 a{
@@ -37,9 +37,9 @@ a{
   color: #262626;
 }
 header {
-  width: 100%;
+  
   background-color: var(--color-orange-light);
-  padding: 10px;
+  padding: 10px 30px ;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -70,12 +70,12 @@ header a img{
 }
 
 main {
-  width: 100%;  
+ 
   padding: 36px 63px ;
-  display: block;  
-  align-items: center;
-  justify-content: center;
+  overflow-y: scroll;
+  
 }
+
 
 #myBtnContainer{
   width: 100%;  
@@ -117,18 +117,17 @@ main {
 
 #searchContainer{
   width: 100%;
-  padding: 10px ;
+  padding-top: 10px;
   display: flex;  
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   justify-items: center;
 }
 
 
 
 #getAll{
-  width: 100%;
-  display: inline-flex;
+  width: 200px;
   background-color: var(--color-white);
   border: none;
   font-family: var(--fonte-btn);
@@ -141,10 +140,10 @@ main {
   background-color: var(--color-grey-light);
   background-position: 10px 2px;
   background-repeat: no-repeat;
-  padding: 12px 443px 11px 50px ;
+  padding: 12px 50px 11px 50px ;
   border: none;
   border-radius: 16px;
-  max-width:400px ;
+  min-width:400px ;
   margin: 0 20px;
   font-size: 17px;
   
@@ -162,7 +161,7 @@ main {
 }
 
 select{
-  width: 100%;
+  max-width: 190px;
   background-color: var(--color-grey-light);
   border: none;
   border-radius: 16px;
@@ -171,10 +170,14 @@ select{
   color: var(--color-grey-dark);
   
 }
-select::selection
- {
-  color:var(--color-orange-dark);
-  transition:0s;
+
+.display_recepies{
+  margin: 0 auto;  
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .empty{  
@@ -183,6 +186,7 @@ select::selection
   justify-items: center;
   flex-direction: column;
   margin: 50px;
+  display: none;
 }
 
 .empty h3{
@@ -200,43 +204,102 @@ select::selection
   padding: 10px 40px;
 }
 
-.container {
-  overflow: hidden;  
+.card {
+  width: 640px;
+  height: 196px;
+  margin: 20px ;
+  padding: 8px;
+  display: flex;  
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;  
+  background-color: var(--color-grey-light);
+  border-radius: 16px;
+
+}
+.product{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  border-right: 1px solid  #000000;
 }
 
-.filterDiv {
-  float: left;
-  background-color: #2196F3;
-  color: #ffffff;
-  width: 100px;
-  line-height: 100px;
-  text-align: center;
-  margin: 2px;
-  display: none; /* Hidden by default */
-}
-.show {
-  display: block;
-}
-
-footer {
+.product figure{
+  width: 168px;
+  height: 168px;
   
+}
+.card img{
+  display: block;  
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  
+}
+
+.product section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 8px;
+    gap: 4px;
+    width: 208px;
+    height: 180px;
+}
+
+
+.product_title{
+  color: var(--color-orange-dark);
+  font-size: 17px;
+  font-weight: 400;
+
+}
+
+.serve_qde{
+  color: var(--color-orange-light);
+  padding: 4px;
+}
+
+.product .description{
+  color: var(--color-grey-dark);
+  width: 208px;
+  padding: 4px;
+
+}
+
+.price{
+  color: var(--color-green-light);
+}
+
+.edit{
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
+  align-items: flex-end;
+  gap: 59px;
+  width: 152px;
+  height: 180px;
+  padding: 8px 8px 8px 32px;  
+}
+
+
+.edit button{
+  border: none;  
+}
+
+footer {  
   background-color: var(--color-grey-light);
   color: var(--color-grey-dark);
   height: 93px;
-  width: 100vw;
-  bottom: 0;
-  position: absolute;
-  display: flex;  
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  width: 100%;    
   font-size: 17px;
   font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-footer p {
-  padding: 20px;
-}
 
 footer a {
   text-decoration: none;

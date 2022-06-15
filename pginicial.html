@@ -1,70 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Itacolomi | Restaurante</title>
-    <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header class="header">
-        <div>
-            <img src="images/LOGO.svg" alt="logo Itacolomi Restaurante">
-            <h3>Olá, Joana</h3>
-        </div >
-        <a href="#"><img src="images/ic_exit.svg" alt="ícone Sair"> Sair</a>
-        
-        
+      <div>
+        <img src="images/LOGO.svg" alt="logo Itacolomi Restaurante" />
+        <h3>Olá, Carla</h3>
+      </div>
+      <a href="#"><img src="images/ic_exit.svg" alt="ícone Sair" /> Sair</a>
     </header>
 
     <main>
-        <div id="myBtnContainer">
-            <button class="btn active" onclick="filterSelection('category')"> Category</button>
-            <button class="btn" onclick="filterSelection('category')"> Category</button>
-            <button class="btn" onclick="filterSelection('category')"> Category</button>
-            <button class="btn" onclick="filterSelection('category')"> Category</button>
-        </div>
-        
-        <div id="searchContainer">
-        
-                 <button id="getAll" onclick="filterSelection('getAll')"><img src="images/ic_produtos.svg" alt="icone produtos"> Produtos cadastrados</button>
-        
-        
-                <input id="searchbar" onkeyup="search_product()" type="text" name="search" placeholder="Buscar na categoria">
-        
-        
-                <select name="select" id="select">
-                    <option value="" disabled selected>Ordenar por (1)</option>
-                    <option value="maiorPreco">Maior preço</option>
-                    <option value="menorPreco">Menor Preço</option>
-                </select>
-        
-        </div>
-        <div class="empty">
-           <img src="images/icon empty.png" alt="">
-        
-           <h3>Ops! Nenhum produto cadastrado</h3>
-        
-          <p>Cadastre o seu primeiro produto e comece a vender agora mesmo</p>
-          <a href="pgcadastrar.html">Cadastrar produtos</a>
-        
-        </div>
-    </main>
-
-    <div class="container">
-        <div class="filterDiv category">Prato1</div>
-        <div class="filterDiv category">Prato2</div>
-        <div class="filterDiv category">Prato3</div>
-       
+      <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('category')">
+          Category
+        </button>
+        <button class="btn" onclick="filterSelection('category')">
+          Category
+        </button>
+        <button class="btn" onclick="filterSelection('category')">
+          Category
+        </button>
+        <button class="btn" onclick="filterSelection('category')">
+          Category
+        </button>
       </div>
 
+      <div id="searchContainer">
+        <button id="getAll" onclick="filterSelection('getAll')">
+          <img src="images/ic_produtos.svg" alt="icone produtos" /> Produtos
+          cadastrados
+        </button>
+
+        <input
+          id="searchbar"
+          onkeyup="search_product()"
+          type="text"
+          name="search"
+          placeholder="Buscar na categoria"
+        />
+
+        <select name="select" id="select">
+          <option value="" disabled selected>Ordenar por (1)</option>
+          <option value="maiorPreco">Maior preço</option>
+          <option value="menorPreco">Menor Preço</option>
+        </select>
+      </div>
+
+      <div class="display_recepies">
+        <div class="empty">
+          <img src="images/icon empty.png" alt="" />
+
+          <h3>Ops! Nenhum produto cadastrado</h3>
+
+          <p>Cadastre o seu primeiro produto e comece a vender agora mesmo</p>
+          <a href="pgcadastrar.html">Cadastrar produtos</a>
+        </div>
+        <div class="card">
+          <div class="product">
+            <figure><img src="images/prato.png" alt="salada" /></figure>
+            <section>
+              <h1 class="product_title">Salada de polvo</h1>
+              <p class="serve_qde">Serve 1 pessoa</p>
+              <p class="description">
+                Descriçao Lorem ipsum dolor sit amet consectetur adipisicing
+                elit.
+              </p>
+              <p class="price">R$ 150,90</p>
+            </section>
+          </div>
+          <div class="edit">
+            <button>
+              <img src="images/ic_edit.svg" alt="ícone editar" /> Editar
+            </button>
+            <button>
+              <img src="images/ic_delete.svg" alt="ícone deletar" /> Excluir
+            </button>
+          </div>
+
+        </div>
+               
+        
+        
+      </div>
+    </main>
 
     <footer>
-        <p>2022 | <a href="https://usemobile.com.br/" target="_blank">Usemobile</a>. Todos os direitos reservados.</p>
-
+      <p>
+        2022 |
+        <a href="https://usemobile.com.br/" target="_blank">Usemobile</a>. Todos
+        os direitos reservados.
+      </p>
     </footer>
-</body>
+  </body>
 </html>
