@@ -1,16 +1,15 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap");
 
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
   font-weight: 400;
 }
 
 :root {
-  
   --color-black: #262626;
   --color-grey-dark: #595555;
   --color-grey-medium: #c0c0c0;
@@ -22,24 +21,23 @@
   --color-green-dark: #6c7249;
   --color-green-light: #72bc54;
 
-  --fonte-btn:'Montserrat', sans-serif;
+  --fonte-btn: "Montserrat", sans-serif;
 }
 html,
 body {
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-rows:auto  1fr auto ;
+  grid-template-rows: auto 1fr auto;
 }
 
-a{
+a {
   text-decoration: none;
   color: #262626;
 }
 header {
-  
   background-color: var(--color-orange-light);
-  padding: 10px 30px ;
+  padding: 10px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -51,42 +49,38 @@ header div {
 }
 
 header img {
-    display: block;
-    width: 20%;
-    height: 20%;
-    object-fit: cover;
+  display: block;
+  width: 20%;
+  height: 20%;
+  object-fit: cover;
 }
 
 .header h3 {
   padding: 30px 30px;
   font-size: 17px;
-  
 }
 
-header a img{
-  width:100%;
+header a img {
+  width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
 main {
- 
-  padding: 36px 63px ;
+  padding: 36px 63px;
   overflow-y: scroll;
-  
 }
 
-
-#myBtnContainer{
-  width: 100%;  
+#myBtnContainer {
+  margin: 0 auto;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-items: center;
-  flex-wrap: wrap;  
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 8px;
 }
-
 
 .btn {
   border: 1px solid var(--color-grey-medium);
@@ -96,11 +90,10 @@ main {
   text-align: center;
   font-family: var(--fonte-btn);
   font-size: 17px;
-  padding:12px 84px;
+  padding: 12px 84px;
   font-weight: 400;
   cursor: pointer;
-  line-height:24px;
- 
+  line-height: 24px;
 }
 
 .btn.active {
@@ -109,58 +102,54 @@ main {
   box-shadow: 1px 1px rgba(0, 0, 0, 0.1);
 }
 
-.btn:hover{
+.btn:hover {
   color: var(--color-green-light);
   border: 1px solid var(--color-green-light);
   box-shadow: 1px 1px rgba(0, 0, 0, 0.1);
 }
 
-#searchContainer{
+#searchContainer {
   width: 100%;
   padding-top: 10px;
-  display: flex;  
+  display: flex;
   align-items: center;
   justify-content: space-between;
   justify-items: center;
 }
 
-
-
-#getAll{
+#getAll {
   width: 200px;
   background-color: var(--color-white);
   border: none;
   font-family: var(--fonte-btn);
   font-size: 17px;
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#searchbar{
+#searchbar {
   background-image: url(images/ic_busca.svg);
   background-color: var(--color-grey-light);
   background-position: 10px 2px;
   background-repeat: no-repeat;
-  padding: 12px 50px 11px 50px ;
+  padding: 12px 50px 11px 50px;
   border: none;
   border-radius: 16px;
-  min-width:400px ;
+  min-width: 400px;
   margin: 0 20px;
   font-size: 17px;
-  
- 
-
 }
-  ::-webkit-input-placeholder{
-    padding: 40px;
-    font-size: 17px;
-  }
+::-webkit-input-placeholder {
+  padding: 40px;
+  font-size: 17px;
+}
 
-#searchbar:focus{
+#searchbar:focus {
   background-image: none;
- 
 }
 
-select{
+select {
   max-width: 190px;
   background-color: var(--color-grey-light);
   border: none;
@@ -168,11 +157,10 @@ select{
   padding: 11px 16px 11px 16px;
   font-size: 17px;
   color: var(--color-grey-dark);
-  
 }
 
-.display_recepies{
-  margin: 0 auto;  
+.display_recepies {
+  margin: 0 auto;
   width: 800px;
   display: flex;
   flex-direction: column;
@@ -180,23 +168,20 @@ select{
   align-items: center;
 }
 
-.empty{  
+.empty {
   display: flex;
   align-items: center;
   justify-items: center;
   flex-direction: column;
   margin: 50px;
-  display: none;
 }
 
-.empty h3{
+.empty h3 {
   color: var(--color-orange-dark);
   padding: 20px;
- 
-
 }
 
-.empty a{
+.empty a {
   background-color: var(--color-orange-dark);
   color: var(--color-white);
   border-radius: 10px;
@@ -207,72 +192,67 @@ select{
 .card {
   width: 640px;
   height: 196px;
-  margin: 20px ;
+  margin: 20px;
   padding: 8px;
-  display: flex;  
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 4px;  
+  gap: 4px;
   background-color: var(--color-grey-light);
   border-radius: 16px;
-
+  display: none;
 }
-.product{
+.product {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 20px;
-  border-right: 1px solid  #000000;
+  border-right: 1px solid #000000;
 }
 
-.product figure{
+.product figure {
   width: 168px;
   height: 168px;
-  
 }
-.card img{
-  display: block;  
+.card img {
+  display: block;
   width: 100%;
   height: 100%;
   border-radius: 16px;
   object-fit: cover;
-  
 }
 
 .product section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0 8px;
-    gap: 4px;
-    width: 208px;
-    height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 8px;
+  gap: 4px;
+  width: 208px;
+  height: 180px;
 }
 
-
-.product_title{
+.product_title {
   color: var(--color-orange-dark);
   font-size: 17px;
   font-weight: 400;
-
 }
 
-.serve_qde{
+.serve_qde {
   color: var(--color-orange-light);
   padding: 4px;
 }
 
-.product .description{
+.product .description {
   color: var(--color-grey-dark);
   width: 208px;
   padding: 4px;
-
 }
 
-.price{
+.price {
   color: var(--color-green-light);
 }
 
-.edit{
+.edit {
   display: flex;
   flex-direction: row;
   justify-content: baseline;
@@ -280,26 +260,143 @@ select{
   gap: 59px;
   width: 152px;
   height: 180px;
-  padding: 8px 8px 8px 32px;  
+  padding: 8px 8px 8px 32px;
 }
 
-
-.edit button{
-  border: none;  
+.edit button {
+  border: none;
 }
 
-footer {  
+.back {
+  display: block;
+}
+
+.display_cadastrar {
+  margin: 0 auto;
+  width: 800px;
+}
+.pg_tile {
+  gap: 8px;
+  min-width: 149px;
+  display: block;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.pg_title h1 {
+  font-size: 17px;
+}
+
+.step1 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form {
+  display: flex;
+  width: 640px;
+  flex-direction: column;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+form input {
+  border: 1px solid var(--color-orange-dark);
+  border-radius: 16px;
+  width: 640px;
+  padding: 16px;
+  font-size: 17px;
+}
+
+#selectCategory {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-orange-dark);
+  border-radius: 16px;
+  max-width: 100%;
+  padding: 16px;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 30px;
+  width: 202px;
+  left: 0px;
+  top: 548px;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+legend {
+  padding-bottom: 10px;
+  font-size: 17px;
+  line-height: 24px;
+}
+.checkbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  width: 640px;
+}
+.inputRadio {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  align-items: center;
+}
+
+input[type="radio"] {
+  font-size: 17px;
+  color: var(--color-grey-dark);
+  width: 16px;
+  height: 16px;
+  radius: 8px;
+}
+
+.buttonStep1 button {
+  background-color: var(--color-orange-dark);
+  color: var(--color-white);
+  display: block;
+  padding: 12px 24px;
+  gap: 8px;
+  width: 192px;
+  height: 51px;
+  border-radius: 16px;
+  border: none;
+  font-family: var(--fonte-btn);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 27px;
+  float: right;
+}
+
+button:disabled {
+  color: var(--color-white-1);
+  background-color: var(--color-grey-medium);
+}
+
+.buttonStep1 {
+  width: 100%;
+}
+
+footer {
   background-color: var(--color-grey-light);
   color: var(--color-grey-dark);
   height: 93px;
-  width: 100%;    
+  width: 100%;
   font-size: 17px;
   font-weight: 400;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 
 footer a {
   text-decoration: none;

@@ -10,34 +10,104 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header class="header">
+    <div>
+        <img src="images/LOGO.svg" alt="logo Itacolomi Restaurante" />
+        <h3>Olá, Carla</h3>
+    </div>
+    <a href="#"><img src="images/ic_exit.svg" alt="ícone Sair" /> Sair</a>
+</header>
+  
+<main>
+    <div class="back">
+        <img src="images/ic_back.svg" alt="voltar">
+    </div>
 
-    <header class="header">
-        <div>
-            <img src="images/LOGO.svg" alt="logo Itacolomi Restaurante">
-            
-            <h3>Olá, Joana</h3>
-        </div >
-        <a href="#"><img src="images/ic_exit.svg" alt="ícone Sair"> Sair</a>
-    </header>
+    <div class="display_cadastrar">
 
-    <nav>
-        <div id="myBtnContainer">
-            <button class="btn active" onclick="filterSelection('category')"> Category</button>
-            <button class="btn" onclick="filterSelection('category')"> Category</button>
-            <button class="btn" onclick="filterSelection('category')"> Category</button>
+        <div class="pg_tile">
+        <h1><img src="images/ic_produtos.svg" alt="icone produto"> Cadastrar produto</h1>
+        <p>Etapa 1 de 2</p>
         </div>
-    </nav>
 
-    <div class="container">
-        <div class="filterDiv category">Prato1</div>
-        <div class="filterDiv category">Prato2</div>
-        <div class="filterDiv category">Prato3</div>
+
+        <form method="POST" action="https://bootcamp-use-desafio.herokuapp.com/products/" id="cadastrado">
+        
+            <div class="step1">
+                <input type="text" id="name" placeholder="Nome do produto">
+                <input type="text" id="description"
+                 data-ls-module="charCounter" maxlength="200" placeholder="Descrição"  >
+                <input type="number" name="price" id="price" placeholder="Valor (R$)">
+                
+                
+                <select name="select" id="selectCategory">
+                    <option value="" disabled selected>Categoria</option>
+                    <option value="pratoCompelto">Prato completo</option>
+                    <option value="sobremesa">Sobremesa</option>
+                    <option value="bebida">Bebida</option>
+                    <option value="acompanhamento">Acompanhamento</option>
+                 </select>
+                
+                 <fieldset>
+                
+                    <div class="checkbox">
+                        <legend>Para quantas pessoas?</legend>
+                        <div class="inputRadio"><input type="radio" name="onePerson" id="onePerson" value="1"> <label for="onePerson">Serve 1 pessoa</label></div>
+                        <div class="inputRadio">
+                            <input type="radio" name="twoPeople" id="twoPeople" value="2">
+                            <label for="twoPeople">Serve 2 pessoas</label>
+                        </div>
+                
+                        <div class="inputRadio"><input type="radio" name="family" id="family" value="4"> <label for="family">Família - até 4 pessoas</label></div>
+                    </div>
+                
+                
+                    <div class="checkbox">
+                        <legend>Disponiblidade:</legend>
+                        <div class="inputRadio"><input type="radio" name="dispTrue" id="dispTrue" value="true"><label for="dispTrue">Produto diponível</label> </div>
+                        <div class="inputRadio"><input type="radio" name="dispFalse" id="dispFalse" value="false"><label for="dispFalse">Produto indisponível</label></div>
+                    </div>
+                 </fieldset>
+            </div>
+
+             <div class="buttonStep1">
+                 <button type="submit"
+                 disabled="disabled">
+                    Próximo
+                </button>
+                 
+             </div>
+        </form>
        
-      </div>
+    </div>
 
-    <footer>
-        <p>2022 | <a href="https://usemobile.com.br/" target="_blank">Usemobile</a>. Todos os direitos reservados.</p>
-    </footer>
+    <!-- <div class="display_upload">
+        <div class="pg_tile">
+            <h1><img src="images/ic_produtos.svg" alt="icone produto"> Cadastrar produto</h1>
+            <p>Etapa 2 de 2</p>
+
+            <h3>Selecione a foto do produto</h3>
+        </div>
+
+        <div class="drag-area">
+            <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+            <button>Anexar foto do produto</button>
+            <header class="drag_drop">Se preferir arraste e solte a foto aqui</header>
+        </div> -->
+
+    </div>
+          
+          
+       
+      </main>
+  
+      <footer>
+        <p>
+          2022 |
+          <a href="https://usemobile.com.br/" target="_blank">Usemobile</a>. Todos
+          os direitos reservados.
+        </p>
+      </footer>
     
 </body>
 </html>
