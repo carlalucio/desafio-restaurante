@@ -27,11 +27,11 @@
 
         <div class="pg_tile">
         <h1><img src="images/ic_produtos.svg" alt="icone produto"> Cadastrar produto</h1>
-        <p>Etapa 1 de 2</p>
+        <p id="p_step1">Etapa 1 de 2</p>
         </div>
 
 
-        <form method="POST" action="https://bootcamp-use-desafio.herokuapp.com/products/" id="cadastrado">
+        <form method="" action="" id="cadastrar">
         
             <div class="step1">
                 <input type="text" id="name" placeholder="Nome do produto">
@@ -71,32 +71,59 @@
             </div>
 
              <div class="buttonStep1">
-                 <button type="submit"
-                 disabled="disabled">
+                 <button type="button"
+                 disabled>
                     Próximo
                 </button>
                  
              </div>
+
+
+
+            <div class="step2">
+
+            <h2>Selecione a foto do produto</h2>
+                
+                
+                <div class="drag-areaCapa">
+                    <div class="icon"><img src="images/ic_upload.png" alt="icone upload"></div>
+                    <button class="anexar-foto">Anexar foto do produto</button>
+                    <input type="file" id="file" hidden> 
+                    <h1 class="drag_drop">Se preferir arraste e solte a foto aqui</h1>
+                </div>
+                
+                
+                <div  class="drag-areaPequena">
+                    <div class="drag-areap">
+                        <div class="icon"><img src="images/ic_upload.png" alt="icone upload"></div>
+                        <button class="anexar-foto">Anexar foto do produto</button>
+                        <input type="file" id="file" name="file" hidden>    
+                        <h1 class="drag_drop">Se preferir arraste e solte a foto aqui</h1>
+                    </div>
+                    <div class="drag-areap">
+                        <div class="icon"><img src="images/ic_upload.png" alt="icone upload"></div>
+                        <button class="anexar-foto">Anexar foto do produto</button>
+                        <h1 class="drag_drop">Se preferir arraste e solte a foto aqui</h1>
+                    </div>
+                </div>
+        
+            </div>
+
+            <div class="buttonStep2">
+                <button type="button"
+                disabled>
+                   Cadastrar
+               </button>
+                
+            </div>
         </form>
+
+        
        
     </div>
 
-    <!-- <div class="display_upload">
-        <div class="pg_tile">
-            <h1><img src="images/ic_produtos.svg" alt="icone produto"> Cadastrar produto</h1>
-            <p>Etapa 2 de 2</p>
-
-            <h3>Selecione a foto do produto</h3>
-        </div>
-
-        <div class="drag-area">
-            <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
-            <button>Anexar foto do produto</button>
-            <header class="drag_drop">Se preferir arraste e solte a foto aqui</header>
-        </div> -->
-
-    </div>
-          
+  
+    
           
        
       </main>
@@ -108,6 +135,9 @@
           os direitos reservados.
         </p>
       </footer>
-    
+ 
+      
+      <script src="cadastro.js"></script>
+      <script src="drag-area_script.js"></script>
 </body>
 </html>
