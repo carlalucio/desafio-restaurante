@@ -1,54 +1,44 @@
-var defaultURL = "https://bootcamp-use-desafio.herokuapp.com/products/";
+// const defaultURL = 'https://bootcamp-use-desafio.herokuapp.com/products/';
 
-getProducts(defaultURL);
+// function getProducts(){
+//   axios.get(defaultURL)
+//   .then(response => {
+//     console.log(response)
+//   })
+//   .catch(error => console.log(error))
 
-function getProducts(url){
-    return axios({
-        method: "GET",
-        url,
-        mode: 'cors',
-        data: {
+// }
 
-        },
-      }).then((response) => {
-        createCards(response.data.results);        
-      });
+// getProducts();
+
+var modalDelete = document.getElementById("ModalDelete");
+
+function openModal() {
+  modalDelete.style.display = "flex";
 }
 
-
-
-
-
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-
-  
-function createCards(data) {
-  const div = document.getElementsByClassName('card');
-  div.innerHTML = "";
-    for (let product of data) {
-    const d = document.createElement("div");
-    d.setAttribute('class', 'product');
-    d.append(createTag('img', `${product.img()}`))
-    d.append(createTag('product_title', `${product.name()}`));
-    d.append(createTag('size', `${product.size()}`));
-    d.append(createTag('description', `${product.description()}`));
-    d.append(createTag('price', `${product.value()}`));
-    div.append(d);
-  }
-}
+function closeModal() {
+  modalDelete.style.display = "none";
 }
 
-function filterSelection(){
-  var xhttp = new XMLHttpRequest();
-  xhttp.open("GET", defaultURL, false);
-  xhttp.send();
-  document.getElementsByClassName("btn").innerHTML = xhttp.responseText;
+var step1 = document.getElementById("step1");
+var step2 = document.getElementById("step2");
+
+function openDragArea() {
+  step1.style.display = "none";
+  step2.style.display = "flex";
 }
 
+function back() {
+  step1.style.display = "flex";
+  step2.style.display = "none";
+}
+
+var empty = document.getElementById("empty");
+var showCard = document.getElementById("card");
+
+function deleteProduct() {
+  showCard.style.display = "none";
+  empty.style.display = "flex";
+  modalDelete.style.display = "none";
+}

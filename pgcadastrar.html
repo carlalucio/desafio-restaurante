@@ -15,12 +15,12 @@
         <img src="images/LOGO.svg" alt="logo Itacolomi Restaurante" />
         <h3>Olá, Carla</h3>
     </div>
-    <a href="#"><img src="images/ic_exit.svg" alt="ícone Sair" /> Sair</a>
+    <a href="pglogin.html"><img src="images/ic_exit.svg" alt="ícone Sair" /> Sair</a>
 </header>
   
 <main>
     <div class="back">
-        <img src="images/ic_back.svg" alt="voltar">
+        <buttom id="back" onclick="back()"><img src="images/ic_back.svg" alt="voltar"></buttom>
     </div>
 
     <div class="display_cadastrar">
@@ -33,7 +33,7 @@
 
         <form method="" action="" id="cadastrar">
         
-            <div class="step1">
+            <div id="step1">
                 <input type="text" id="name" placeholder="Nome do produto">
                 <input type="text" id="description"
                  data-ls-module="charCounter" maxlength="200" placeholder="Descrição"  >
@@ -68,19 +68,23 @@
                         <div class="inputRadio"><input type="radio" name="dispFalse" id="dispFalse" value="false"><label for="dispFalse">Produto indisponível</label></div>
                     </div>
                  </fieldset>
+
+                 <div id="buttonStep1">
+                    
+                        <button type="button"
+                        onclick="openDragArea()">
+                           Próximo
+                        </button>
+                    
+                    
+                </div>
             </div>
 
-             <div class="buttonStep1">
-                 <button type="button"
-                 disabled>
-                    Próximo
-                </button>
-                 
-             </div>
+             
 
 
 
-            <div class="step2">
+            <div id="step2">
 
             <h2>Selecione a foto do produto</h2>
                 
@@ -106,16 +110,18 @@
                         <h1 class="drag_drop">Se preferir arraste e solte a foto aqui</h1>
                     </div>
                 </div>
+
+                <div class="buttonStep2">
+                    <button type="button"
+                    >
+                       Cadastrar
+                   </button>
+                    
+                </div>
         
             </div>
 
-            <div class="buttonStep2">
-                <button type="button"
-                disabled>
-                   Cadastrar
-               </button>
-                
-            </div>
+            
         </form>
 
         
@@ -137,7 +143,8 @@
       </footer>
  
       
-      <script src="cadastro.js"></script>
+      
       <script src="drag-area_script.js"></script>
+      <script src="index.js"></script>
 </body>
 </html>

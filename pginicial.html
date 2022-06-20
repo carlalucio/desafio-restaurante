@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Itacolomi | Restaurante</title>
     <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon" />
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="style.css" />
+
+    
 
 
   </head>
@@ -17,18 +19,18 @@
         <img src="images/LOGO.svg" alt="logo Itacolomi Restaurante" />
         <h3>Olá, Carla</h3>
       </div>
-      <a href="#"><img src="images/ic_exit.svg" alt="ícone Sair" /> Sair</a>
+      <a href="pglogin.html"><img src="images/ic_exit.svg" alt="ícone Sair" /> Sair</a>
     </header>
 
     <main>
       <div id="myBtnContainer">
-        <button class="btn active" onclick="filterSelection('bebidas')">
+        <button class="btn " onclick="filterSelection('bebidas')">
           Bebidas
         </button>
         <button class="btn" onclick="filterSelection('sobremesas')">
           Sobremesas
         </button>
-        <button class="btn" onclick="filterSelection('prato_completo')">
+        <button class="btn active" onclick="filterSelection('prato_completo')">
           Prato completo
         </button>
         <button class="btn" onclick="filterSelection('promoções')">
@@ -58,7 +60,7 @@
       </div>
 
       <div class="display_recepies">
-        <div class="empty">
+        <div id="empty" class="empty">
           <img src="images/icon empty.png" alt="" />
 
           <h3>Ops! Nenhum produto cadastrado</h3>
@@ -68,31 +70,33 @@
         </div>
 
         
-        <div class="card">
+        <div id ="card" class="card">
           <div class="product">
-            <figure><img src="" alt="" /></figure>
+            <figure><img src="images/prato.png" alt="salada" /></figure>
             <section>
-              <h1 class="product_title"></h1>
-              <p class="size"></p>
+              <h1 class="product_title">Salada de Polvo</h1>
+              <p class="size">Serve 2 pessoas</p>
               <p class="description">
-                
+                Polvo fresco com legumes refogados (Cenoura, cebola, pimentão, grão de bico e pepino)
               </p>
-              <p class="price"></p>
+              <p class="price">150.90</p>
             </section>
           </div>
           <div class="edit">
-            <button>
-              <img src="images/ic_edit.svg" alt="ícone editar" /> Editar
-            </button>
-            <button type="button" id="btnDelete" data-toggle="modal" data-target="#modal">
+            <a href="pgcadastrar.html">
+              <button>
+                <img src="images/ic_edit.svg" alt="ícone editar" /> Editar
+              </button>
+            </a>
+            <button type="button" id="btnDelete" onclick="openModal()">
               <img src="images/ic_delete.svg" alt="ícone deletar" /> Excluir
             </button>
           </div>
 
         </div>
                
-        <div class="modal fade" id="ModalDelete" tabindex="-1" role="dialog" aria-labelledby="Delete" aria-hidden="true" hidden>
-          <div class="modal-dialog" role="document">
+        <div id="ModalDelete" tabindex="-1"  >
+          
             <div class="modal-content">
               <div class="modal-body">
                 <h5 class="modal-title" id="tituloModal">Apagar produto</h5>
@@ -100,12 +104,12 @@
               </div>
               
               <div class="modal-footer">
-                  <button type="button" id=" btn-delete" class="btn-modal" >Sim, apagar</button>
-                <button type="button" id=" btn-close" class="btn-modal" data-dismiss="modal">Não</button>
+                  <button type="button" id=" btn-delete" class="btn-modal" onclick="deleteProduct()">Sim, apagar</button>
+                <button type="button" id=" btn-close" class="btn-modal"  onclick="closeModal()">Não</button>
                 
               </div>
             </div>
-          </div>
+          
         </div>
       </div>
     </main>
@@ -117,10 +121,10 @@
         os direitos reservados.
       </p>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
+    
+    
+    
     <script src="index.js"></script>
+    
   </body>
 </html>
